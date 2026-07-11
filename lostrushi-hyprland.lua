@@ -41,6 +41,7 @@ local menu        = "hyprlauncher"
 
 -- Persona-Quickshell autostart (sleep avoids startup race)
 hl.on("hyprland.start", function ()
+    hl.exec_cmd("touch /tmp/hypr-start-fired")
     hl.exec_cmd("sleep 2 && qs -c /home/LayronUlrich/Downloads/Persona-Quickshell/")
 end)
 
